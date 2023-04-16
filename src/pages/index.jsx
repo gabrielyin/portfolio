@@ -7,14 +7,12 @@ import { SiTailwindcss } from 'react-icons/si';
 import loginImage from '../assets/pagina-de-login.png';
 import todoListImage from '../assets/todo-list.png';
 import Image from "next/image";
-import { useRouter } from "next/router";
 
 export
   default function Home() {
   const [onActive, setOnActive] = useState('portfolio');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  const router = useRouter()
 
   function sendMessage(ev) {
     ev.preventDefault();
@@ -49,7 +47,7 @@ export
           className={onActive == 'contato' ? "tracking-wide bg-green-500 hover:bg-green-700 text-white font-bold py-2.5 px-6 rounded-full transition-all" : "hover:bg-green-800 text-gray-300 font-bold py-2.5 px-6 rounded-full transition-all"}
           onClick={() => setOnActive('contato')}
         >
-          Contato
+          Conversar
         </button>
       </div >
       {onActive === 'portfolio' ? (
@@ -90,10 +88,10 @@ export
                   </div>
                 </div>
                 <div className="flex items-end gap-2">
-                  <Link href='#'>
+                  <Link href='https://youtu.be/UH2Yh1gcp5g'>
                     <AiOutlineYoutube />
                   </Link>
-                  <Link href='#'>
+                  <Link href='https://www.instagram.com/yinovar/'>
                     <AiOutlineInstagram />
                   </Link>
                 </div>
@@ -139,10 +137,10 @@ export
                   </div>
                 </div>
                 <div className="flex items-end gap-2">
-                  <Link href='#'>
+                  <Link href='https://youtu.be/b-SH-ZTpdpM'>
                     <AiOutlineYoutube />
                   </Link>
-                  <Link href='#'>
+                  <Link href='https://www.instagram.com/yinovar/'>
                     <AiOutlineInstagram />
                   </Link>
                 </div>

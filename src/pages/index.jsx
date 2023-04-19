@@ -9,6 +9,7 @@ import todoListImage from '../assets/todo-list.png';
 import imobiliariaImage from '../assets/imobiliaria.png';
 import maquinareImage from '../assets/maquinareImage.png';
 import Image from "next/image";
+import Head from "next/head";
 
 export
   default function Home() {
@@ -31,6 +32,9 @@ export
 
   return (
     <div className="min-h-screen bg-primary">
+      <Head>
+        <title>Portfolio | Yinovar</title>
+      </Head>
       <div
         className="p-3 w-fit mx-auto text-3xl font-bold text-white tracking-wide"
       >

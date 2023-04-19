@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineLink } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineLink, AiFillYoutube } from 'react-icons/ai';
 import { FaReact } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb'
 import { SiTailwindcss, SiSupabase } from 'react-icons/si';
@@ -32,7 +32,7 @@ export
   return (
     <div className="min-h-screen bg-primary">
       <div
-        className="p-3 w-fit mx-auto text-4xl font-bold text-white tracking-wide"
+        className="p-3 w-fit mx-auto text-3xl font-bold text-white tracking-wide"
       >
         Portfolio Gabriel Yin<span className="text-green-500 text-5xl">.</span>
       </div>
@@ -50,6 +50,12 @@ export
           onClick={() => setOnActive('contato')}
         >
           Conversar
+        </button>
+        <button
+          className="tracking-wide bg-red-500 hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-full transition-all flex items-center gap-2"
+        >
+          <AiFillYoutube size={20} />
+          <p className="hidden md:block">Youtube</p>
         </button>
       </div >
       {onActive === 'portfolio' ? (

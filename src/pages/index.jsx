@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { useState } from "react";
-import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
+import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineLink } from 'react-icons/ai';
 import { FaReact } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb'
-import { SiTailwindcss } from 'react-icons/si';
+import { SiTailwindcss, SiSupabase } from 'react-icons/si';
 import loginImage from '../assets/pagina-de-login.png';
 import todoListImage from '../assets/todo-list.png';
+import imobiliariaImage from '../assets/imobiliaria.png';
+import maquinareImage from '../assets/maquinareImage.png';
 import Image from "next/image";
 
 export
@@ -59,6 +61,101 @@ export
               className="h-[300px] md:w-2/5"
             >
               <Image
+                alt='maquinare'
+                src={maquinareImage}
+                className="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              className="p-4 grow flex flex-col justify-between md:w-3/5"
+            >
+              <div>
+                <h2 className="text-3xl font-semibold mb-2 text-button">Marketplace de locação</h2>
+                <p className="text-white">
+                  Nesse projeto o objetivo foi construir marketplace de locação de máquinas e equipamentos de construção civil. O Supabase é um Backend as a service que foi utilizado nesse projeto que possui as próprias APIs. Essa aplicação não possui um backend pois conta com a ajuda do Supabase (BaaS).
+                </p>
+              </div>
+              <div className="flex text-white justify-between text-3xl">
+                <div>
+                  <h2 className="text-lg mb-1">
+                    Tecnologias
+                  </h2>
+                  <div className="flex gap-2 ">
+                    <Link target="_blank" href='https://react.dev/'>
+                      <FaReact />
+                    </Link>
+                    <Link target="_blank" href='https://tailwindcss.com/'>
+                      <SiTailwindcss />
+                    </Link>
+                    <Link target="_blank" href="https://supabase.com/">
+                      <SiSupabase />
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-end gap-2">
+                  <Link target="_blank" href='https://www.maquinare.com.br/'>
+                    <AiOutlineLink />
+                  </Link>
+                  <Link target="_blank" href='https://www.instagram.com/yinovar/'>
+                    <AiOutlineInstagram />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row cursor-pointer"
+          >
+            <div
+              className="h-[300px] md:w-2/5"
+            >
+              <Image
+                alt='imobiliaria'
+                src={imobiliariaImage}
+                className="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              className="p-4 grow flex flex-col justify-between md:w-3/5"
+            >
+              <div>
+                <h2 className="text-3xl font-semibold mb-2 text-button">Site para imobiliária</h2>
+                <p className="text-white">
+                  Nesse projeto o objetivo foi construir um site que pode ser utilizado por uma imobiliária. Os dados utilizados nesse projeto foram mockados mas podem ser dinâmicos
+                </p>
+              </div>
+              <div className="flex text-white justify-between text-3xl">
+                <div>
+                  <h2 className="text-lg mb-1">
+                    Tecnologias
+                  </h2>
+                  <div className="flex gap-2 ">
+                    <Link target="_blank" href='https://react.dev/'>
+                      <FaReact />
+                    </Link>
+                    <Link target="_blank" href='https://tailwindcss.com/'>
+                      <SiTailwindcss />
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-end gap-2">
+                  <Link target="_blank" href='https://real-estate-website-phi.vercel.app/'>
+                    <AiOutlineLink />
+                  </Link>
+                  <Link target="_blank" href='https://www.instagram.com/yinovar/'>
+                    <AiOutlineInstagram />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row cursor-pointer"
+          >
+            <div
+              className="h-[300px] md:w-2/5"
+            >
+              <Image
                 alt='login image'
                 src={loginImage}
                 className="object-cover h-full w-full"
@@ -79,19 +176,19 @@ export
                     Tecnologias
                   </h2>
                   <div className="flex gap-2 ">
-                    <Link href='#'>
+                    <Link target="_blank" href='https://react.dev/'>
                       <FaReact />
                     </Link>
-                    <Link href='#'>
+                    <Link target="_blank" href='https://tailwindcss.com/'>
                       <SiTailwindcss />
                     </Link>
                   </div>
                 </div>
                 <div className="flex items-end gap-2">
-                  <Link href='https://youtu.be/UH2Yh1gcp5g'>
+                  <Link target="_blank" href='https://youtu.be/UH2Yh1gcp5g'>
                     <AiOutlineYoutube />
                   </Link>
-                  <Link href='https://www.instagram.com/yinovar/'>
+                  <Link target="_blank" href='https://www.instagram.com/yinovar/'>
                     <AiOutlineInstagram />
                   </Link>
                 </div>
@@ -125,22 +222,22 @@ export
                     Tecnologias
                   </h2>
                   <div className="flex gap-2 ">
-                    <Link href='#'>
+                    <Link target="_blank" href='https://react.dev/'>
                       <FaReact />
                     </Link>
-                    <Link href='#'>
+                    <Link target="_blank" href='https://tailwindcss.com/'>
                       <SiTailwindcss />
                     </Link>
-                    <Link href='#'>
+                    <Link target="_blank" href='https://nextjs.org/'>
                       <TbBrandNextjs />
                     </Link>
                   </div>
                 </div>
                 <div className="flex items-end gap-2">
-                  <Link href='https://youtu.be/b-SH-ZTpdpM'>
+                  <Link target="_blank" href='https://youtu.be/b-SH-ZTpdpM'>
                     <AiOutlineYoutube />
                   </Link>
-                  <Link href='https://www.instagram.com/yinovar/'>
+                  <Link target="_blank" href='https://www.instagram.com/yinovar/'>
                     <AiOutlineInstagram />
                   </Link>
                 </div>

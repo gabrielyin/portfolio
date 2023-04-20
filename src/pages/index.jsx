@@ -1,13 +1,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AiOutlineInstagram, AiOutlineYoutube, AiOutlineLink, AiFillYoutube } from 'react-icons/ai';
-import { FaReact } from 'react-icons/fa';
+import { FaReact, FaSass, FaCss3 } from 'react-icons/fa';
 import { TbBrandNextjs } from 'react-icons/tb'
 import { SiTailwindcss, SiSupabase } from 'react-icons/si';
 import loginImage from '../assets/pagina-de-login.png';
 import todoListImage from '../assets/todo-list.png';
 import imobiliariaImage from '../assets/imobiliaria.png';
 import maquinareImage from '../assets/maquinareImage.png';
+import ecommerceImage from '../assets/vtex.png';
 import Image from "next/image";
 import Head from "next/head";
 
@@ -55,15 +56,63 @@ export
         >
           Conversar
         </button>
-        <button
+        <Link
           className="tracking-wide bg-red-500 hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-full transition-all flex items-center gap-2"
+          href="https://www.youtube.com/@brdevs"
+          target="_blank"
         >
           <AiFillYoutube size={20} />
           <p className="hidden md:block">Youtube</p>
-        </button>
+        </Link>
       </div >
       {onActive === 'portfolio' ? (
         <main className="max-w-4xl mx-auto px-4 md:px-0 py-10 flex flex-col gap-4">
+          <div
+            className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row cursor-pointer"
+          >
+            <div
+              className="h-[300px] md:w-2/5"
+            >
+              <Image
+                alt='ecommerce'
+                src={ecommerceImage}
+                className="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              className="p-4 grow flex flex-col justify-between md:w-3/5"
+            >
+              <div>
+                <h2 className="text-3xl font-semibold mb-2 text-button">Ecommerce</h2>
+                <p className="text-white">
+                  Nesse projeto o objetivo foi construir a home page de um ecommerce. O foco nesse projeto foi seguir um projeto no figma e por isso ele é somente para computadores.
+                </p>
+              </div>
+              <div className="flex text-white justify-between text-3xl">
+                <div>
+                  <h2 className="text-lg mb-1">
+                    Tecnologias
+                  </h2>
+                  <div className="flex gap-2 ">
+                    <Link target="_blank" href='https://react.dev/'>
+                      <FaReact />
+                    </Link>
+                    <Link target="_blank" href="https://sass-lang.com/">
+                      <FaSass />
+                    </Link>
+                    <Link target="_blank" href="https://www.w3.org/Style/CSS/Overview.en.html">
+                      <FaCss3 />
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-end gap-2">
+                  <Link target="_blank" href='https://www.instagram.com/yinovar/'>
+                    <AiOutlineInstagram />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
           <div
             className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row cursor-pointer"
           >

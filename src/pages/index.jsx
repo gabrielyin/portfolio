@@ -9,6 +9,7 @@ import todoListImage from '../assets/todo-list.png';
 import imobiliariaImage from '../assets/imobiliaria.png';
 import maquinareImage from '../assets/maquinareImage.png';
 import ecommerceImage from '../assets/vtex.png';
+import gastosImage from '../assets/gastos.png';
 import Image from "next/image";
 import Head from "next/head";
 
@@ -67,6 +68,55 @@ export
       </div >
       {onActive === 'portfolio' ? (
         <main className="max-w-4xl mx-auto px-4 md:px-0 py-10 flex flex-col gap-4">
+          <div
+            className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row"
+          >
+            <div
+              className="h-[300px] md:w-2/5"
+            >
+              <Image
+                alt='gastosImage'
+                src={gastosImage}
+                className="object-cover h-full w-full"
+              />
+            </div>
+            <div
+              className="p-4 grow flex flex-col justify-between md:w-3/5"
+            >
+              <div>
+                <h2 className="text-3xl font-semibold mb-2 text-button">Dashboard de gastos</h2>
+                <p className="text-white">
+                  Nesse projeto o objetivo foi criar um dashboard onde o usuário consegue fazer a gestão e controle dos seus gastos. Essa aplicação foi feita com o Nextjs e TailwindCSS.
+                </p>
+              </div>
+              <div className="flex text-white justify-between text-3xl">
+                <div>
+                  <h2 className="text-lg mb-1">
+                    Tecnologias
+                  </h2>
+                  <div className="flex gap-2 ">
+                    <Link target="_blank" href='https://react.dev/'>
+                      <FaReact />
+                    </Link>
+                    <Link target="_blank" href='https://tailwindcss.com/'>
+                      <SiTailwindcss />
+                    </Link>
+                    <Link target="_blank" href='https://nextjs.org/'>
+                      <TbBrandNextjs />
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex items-end gap-2">
+                  <Link target="_blank" href='https://youtu.be/yTBHF31L5c0'>
+                    <AiOutlineYoutube />
+                  </Link>
+                  <Link target="_blank" href='https://www.instagram.com/yinovar/'>
+                    <AiOutlineInstagram />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
           <div
             className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row cursor-pointer"
           >

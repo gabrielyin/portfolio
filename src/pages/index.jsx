@@ -35,12 +35,12 @@ export
   return (
     <div className="min-h-screen bg-primary">
       <Head>
-        <title>Aulas de programação</title>
+        <title>Portfolio</title>
       </Head>
       <div
         className="p-3 w-fit mx-auto text-3xl font-bold text-white tracking-wide"
       >
-        Aulas de programação<span className="text-green-500 text-5xl">.</span>
+        Portfolio<span className="text-green-500 text-5xl">.</span>
       </div>
       <div
         className="w-fit flex gap-2 mx-auto my-2"

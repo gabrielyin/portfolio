@@ -35,28 +35,54 @@ export
   return (
     <div className="min-h-screen bg-primary">
       <Head>
-        <title>Portfolio | Yinovar</title>
+        <title>Aulas de programação</title>
       </Head>
       <div
         className="p-3 w-fit mx-auto text-3xl font-bold text-white tracking-wide"
       >
-        Portfolio Gabriel Yin<span className="text-green-500 text-5xl">.</span>
+        Aulas de programação<span className="text-green-500 text-5xl">.</span>
       </div>
-      <div
+      <form
+        onSubmit={(ev) => sendMessage(ev)}
+        className="max-w-xl bg-white rounded-lg p-4 border border-gray-300 flex flex-col gap-4 mx-3 md:mx-auto my-10"
+      >
+        <div>
+          <h4 className="font-semibold">Entre em contato para saber mais sobre as aulas de programação.</h4>
+          <ul>
+            <li>- Javascript</li>
+            <li>- Python</li>
+            <li>- HTML</li>
+            <li>- CSS</li>
+          </ul>
+        </div>
+        <label className="flex flex-col">
+          Nome
+          <input
+            className="outline-blue-500 py-1.5 px-2 rounded-md border-2 border-gray-300 transition-all"
+            type="text"
+            value={name}
+            onChange={(ev) => setName(ev.target.value)}
+          />
+        </label>
+        <label className="flex flex-col">
+          Mensagem
+          <textarea
+            className="outline-blue-500 py-1.5 px-2 rounded-md border-2 border-gray-300 min-h-[100px] transition-all"
+            type="text"
+            value={message}
+            onChange={(ev) => setMessage(ev.target.value)}
+            placeholder="Mande sua mensagem aqui..."
+          />
+        </label>
+        <input
+          type="submit"
+          className="cursor-pointer bg-green-500 py-2 px-3 rounded-md text-white font-semibold tracking-wide hover:bg-green-600 transition-all w-fit mt-4 outline-none focus:ring-2 ring-blue-500"
+          value='Enviar WhatsApp'
+        />
+      </form>
+      {/* <div
         className="w-fit flex gap-2 mx-auto my-2"
       >
-        <button
-          className={onActive == 'portfolio' ? "tracking-wide bg-green-500 hover:bg-green-700 text-white font-bold py-2.5 px-6 rounded-full transition-all" : "hover:bg-green-800 text-gray-300 font-bold py-2.5 px-6 rounded-full transition-all"}
-          onClick={() => setOnActive('portfolio')}
-        >
-          Portfolio
-        </button>
-        <button
-          className={onActive == 'contato' ? "tracking-wide bg-green-500 hover:bg-green-700 text-white font-bold py-2.5 px-6 rounded-full transition-all" : "hover:bg-green-800 text-gray-300 font-bold py-2.5 px-6 rounded-full transition-all"}
-          onClick={() => setOnActive('contato')}
-        >
-          Conversar
-        </button>
         <Link
           className="tracking-wide bg-red-500 hover:bg-red-700 text-white font-bold py-2.5 px-6 rounded-full transition-all flex items-center gap-2"
           href="https://www.youtube.com/@brdevs"
@@ -65,9 +91,8 @@ export
           <AiFillYoutube size={20} />
           <p className="hidden md:block">Youtube</p>
         </Link>
-      </div >
-      {onActive === 'portfolio' ? (
-        <main className="max-w-4xl mx-auto px-4 md:px-0 py-10 flex flex-col gap-4">
+      </div > */}
+      {/* <main className="max-w-4xl mx-auto px-4 md:px-0 py-10 flex flex-col gap-4">
           <div
             className="bg-secondary rounded-lg overflow-hidden min-h-[600px] md:min-h-[300px] flex flex-col md:flex-row"
           >
@@ -353,41 +378,7 @@ export
               </div>
             </div>
           </div>
-        </main>
-      ) : (
-        <form
-          onSubmit={(ev) => sendMessage(ev)}
-          className="max-w-xl bg-white rounded-lg p-4 border border-gray-300 flex flex-col gap-4 mx-3 md:mx-auto my-10"
-        >
-          <div>
-            <h4 className="font-semibold">Tem alguma dúvida? mande uma mensagem</h4>
-          </div>
-          <label className="flex flex-col">
-            Nome
-            <input
-              className="outline-blue-500 py-1.5 px-2 rounded-md border-2 border-gray-300 transition-all"
-              type="text"
-              value={name}
-              onChange={(ev) => setName(ev.target.value)}
-            />
-          </label>
-          <label className="flex flex-col">
-            Mensagem
-            <textarea
-              className="outline-blue-500 py-1.5 px-2 rounded-md border-2 border-gray-300 min-h-[100px] transition-all"
-              type="text"
-              value={message}
-              onChange={(ev) => setMessage(ev.target.value)}
-              placeholder="Mande sua mensagem aqui..."
-            />
-          </label>
-          <input
-            type="submit"
-            className="cursor-pointer bg-green-500 py-2 px-3 rounded-md text-white font-semibold tracking-wide hover:bg-green-600 transition-all w-fit mt-4 outline-none focus:ring-2 ring-blue-500"
-            value='Enviar WhatsApp'
-          />
-        </form>
-      )}
+        </main> */}
     </div >
   )
 }
